@@ -1,0 +1,39 @@
+
+
+<form (submit) ="agregarUsuario(nuevoUsuario)">
+    <input type="text" #nuevoUsuario>
+    <button> 
+        Enviar usuario;
+    </button>
+
+</form>
+<ul >
+    <li *ngFor ="let usuario of usuarios" >
+        {{usuario}}
+
+        <button (click)="eliminarUsuario(usuario)">
+            X 
+        </button>
+
+    </li>
+
+</ul>
+<div>
+<form>
+
+<input type= "text" name="nombre" [(ngModel)]="nombre">
+<input type="number" name= "edad" [(ngModel)]="edad">
+
+</form>
+    Nombre: {{nombre}} <br>
+    Edad: {{edad}}
+
+</div>
+
+<div>
+    <li *ngFor ="let publicacion of publicaciones" >
+     {{publicacion.id}}
+     {{publicacion.body}}
+     </li>
+</div>
+<hr>
